@@ -1,0 +1,3 @@
+rebux: es la libreria como tal
+react-redux: es la libreria que tiene las funciones para conectar nuestra aplicacion de reacte-react-app con redux
+redux-thunk: bagamente es lo que te permite usar funciones asincronas en redux
