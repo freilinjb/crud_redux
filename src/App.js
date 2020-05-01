@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <Header/>
     {/* Todo lo que esta fuera de el Switch se utilizara en toda la pagina */}
-      <div className="container">
+      <div className="container mt-5">
         {/* Todo lo que esta en  */}
         <Switch>
           {/* Todo lo que este en siwth dentro de route es lo que va a cargar en cada pagina */}
