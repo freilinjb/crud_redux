@@ -1,4 +1,8 @@
-Unas de las ventajas de utilizar esta estructura
-es tener toda la complejidad que te da redux
-y tener toda la centilles que te da context
-video = 10 MOstrando el Formulario de Nuevo Proyecto
+//Instalando el servidor
+sudo npm install -g json-server
+
+
+esla DB = db.json 
+
+POR DEFAULT EL Servidor corre en el puerto 3000 pero con ---port 
+json-server db.json ---port 4000
