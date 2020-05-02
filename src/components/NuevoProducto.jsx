@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { useDispatch, useSelector} from 'react-redux';
 
 //useDiapatch: sirve para mandar a ejecutar las actiones que tengamos
@@ -7,6 +7,10 @@ import { useDispatch, useSelector} from 'react-redux';
 //Actions de Redux
 import { crearNuevoProductoAction } from  '../actions/productoActions.jsx';
 const NuevoProducto = () => {
+
+    //state del componente
+    const [nombre, guardarNombre] = useState('');
+    const [precio, guardarPrecio] = useState(0);
 
     //Utilizar use dispatch y te crea una funcion
     const dispatch = useDispatch();
@@ -20,6 +24,9 @@ const NuevoProducto = () => {
         e.preventDefault();
 
         //Validar formulario
+        if(nombre.trim() ==='' && precio <= 0){
+            return;
+        }
 
         //Si no hay errores
 
@@ -45,15 +52,19 @@ const NuevoProducto = () => {
                                     className="form-control" 
                                     placeholder="Nombre del Producto"
                                     name="nombre"
+                                    valu={nombre}
+                                    onChange={e=>guardarNombre(e.target.value)}
                                     />
                            </div>
                            <div className="form-group">
-                                <label htmlFor="producto">Precio del Producto</label>
+                                <label htmlFor="producto">Precio del Prod ucto</label>
                                 <input 
                                     type="number" 
                                     className="form-control" 
                                     placeholder="Precio del Producto"
                                     name="precio"
+                                    value={precio}
+                                    onChange={e=>guardarPrecio(Number(e.target.value))}
                                     />
                            </div>
                            <button type="submit" className="btn btn-primary btn-block font-weight w-100">AGREGAR</button>
