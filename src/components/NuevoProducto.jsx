@@ -18,9 +18,7 @@ const NuevoProducto = () => {
 
     //acceder al state del store
     const cargando = useSelector( state => state.productos.loading);
-
-    console.log(cargando);
-    
+    const error = useSelector(state => state.productos.error);
 
     //dispatch se utiliza para mandar a llamar las funciones que esten en el action
     //manda a llamar el action de productoAction
@@ -80,6 +78,7 @@ const NuevoProducto = () => {
                            <button type="submit" className="btn btn-primary btn-block font-weight w-100">AGREGAR</button>
                        </form>
                        { cargando ? <p> Cargando... </p> : null}
+                       { error ? <p className="alert alert-danger p2 mt-4 text-center"> Hubo un error </p> : null}
                    </div>
                </div>
            </div>
