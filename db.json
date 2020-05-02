@@ -89,6 +89,16 @@
       "nombre": "Naruto",
       "precio": 51,
       "id": 18
+    },
+    {
+      "nombre": "Arenque",
+      "precio": 5454,
+      "id": 19
+    },
+    {
+      "nombre": "Arenque",
+      "precio": 5454,
+      "id": 20
     }
   ]
 }
