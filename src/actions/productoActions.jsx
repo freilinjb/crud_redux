@@ -1,7 +1,10 @@
 import {
     AGRERGAR_PRODUCTO,
     AGRERGAR_PRODUCTO_EXITO,
-    AGRERGAR_PRODUCTO_ERROR
+    AGRERGAR_PRODUCTO_ERROR,
+    COMENZAR_DESCARGAR_PRODUCTOS,
+    COMENZAR_DESCARGAR_EXITO,
+    COMENZAR_DESCARGAR_ERROR
 } from '../types';
 import clienteAxios from '../config/axios';
 import Swal from 'sweetalert2';
@@ -58,4 +61,16 @@ const agregarProductoExito = producto => ({
 const agrergarProductoError = (estado) => ({
     type: AGRERGAR_PRODUCTO_ERROR,
     payload: estado
+});
+
+//TODO Funcion que descarga los productos de la BD
+export function obtenerProductos() {
+    return async (dispatch) => {
+        dispatch(descargarProductos());
+    }
+}
+
+const descargarProductos = () =>({
+    type:COMENZAR_DESCARGAR_PRODUCTOS,
+    payload: true
 })

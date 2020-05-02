@@ -104,6 +104,11 @@
       "nombre": "Prueba",
       "precio": 5,
       "id": 21
+    },
+    {
+      "nombre": "Sopita Roja",
+      "precio": 789,
+      "id": 22
     }
   ]
 }
