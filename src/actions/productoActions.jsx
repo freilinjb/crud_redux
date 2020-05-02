@@ -67,6 +67,14 @@ const agrergarProductoError = (estado) => ({
 export function obtenerProductos() {
     return async (dispatch) => {
         dispatch(descargarProductos());
+
+        try {
+            const respuesta = await clienteAxios.get('/productos');
+            console.log(respuesta.data);
+            
+        } catch (error) {
+            
+        }
     }
 }
 
