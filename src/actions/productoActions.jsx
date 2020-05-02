@@ -70,7 +70,7 @@ export function obtenerProductos() {
 
         try {
             const respuesta = await clienteAxios.get('/productos');
-            console.log(respuesta.data);
+            dispatch(agrergarProductosExitosa(respuesta.data));
             
         } catch (error) {
             
@@ -81,4 +81,9 @@ export function obtenerProductos() {
 const descargarProductos = () =>({
     type:COMENZAR_DESCARGAR_PRODUCTOS,
     payload: true
-})
+});
+
+const agrergarProductosExitosa = productos => ({
+    type: COMENZAR_DESCARGAR_EXITO,
+    payload: productos
+});

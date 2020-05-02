@@ -36,7 +36,13 @@ export default function(state = initialState, action) {
                 loading: false,
                 error: action.payload
             }
-
+        case COMENZAR_DESCARGAR_EXITO:
+            return {
+                ...state,
+                loading: false,
+                error: null,
+                productos: action.payload
+            }
         default:
             return state;
     }
