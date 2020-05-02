@@ -6,7 +6,11 @@ import {
 
 //Crear nuevos productos
 export function crearNuevoProductoAction(producto) {
-    return () => {
-        console.log(producto);
+    return (dispatch) => {
+        dispatch(agrergarProducto());
     }
 }
+
+const agrergarProducto = () => ({
+    type: AGRERGAR_PRODUCTO
+});
