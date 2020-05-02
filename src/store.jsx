@@ -8,9 +8,12 @@ const store = createStore(
     compose(applyMiddleware(thunk),
         //Esta configuracion evita que de error al no tener la extension
         //redux devtools
-        typeof windows === 'object' &&
-            typeof window.__REDUX_DEVTOOLS_EXTENSION__!== 'undefined' ?  
-                window.__REDUX_DEVTOOLS_EXTENSION__() : f => f
+        window.__REDUX_DEVTOOLS_EXTENSION__ &&
+        window.__REDUX_DEVTOOLS_EXTENSION__()
+        // typeof windows === 'object' &&
+        //     typeof window.__REDUX_DEVTOOLS_EXTENSION__!== 'undefined' ?  
+        //         window.__REDUX_DEVTOOLS_EXTENSION__() : f => f
+
         //CIERTAS FUNCIONES PARA VER LOS STATE
         //si no se utilizara thunk no se requiere
     )

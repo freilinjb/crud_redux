@@ -18,6 +18,12 @@ export default function(state = initialState, action) {
                 ...state,
                 loading: true
             }
+        case AGRERGAR_PRODUCTO_EXITO:
+            return{
+                ...state,
+                loading: false,//Cuando ya se confirmo que se guardo cambia el valor
+                productos: [...state.productos, action.payload]
+            }
         default:
             return state;
     }
