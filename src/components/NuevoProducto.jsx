@@ -17,7 +17,7 @@ const NuevoProducto = () => {
     const dispatch = useDispatch();
 
     //acceder al state del store
-    const cargando = useSelector( state => state);
+    const cargando = useSelector( state => state.productos.loading);
 
     console.log(cargando);
     
@@ -79,6 +79,7 @@ const NuevoProducto = () => {
                            </div>
                            <button type="submit" className="btn btn-primary btn-block font-weight w-100">AGREGAR</button>
                        </form>
+                       { cargando ? <p> Cargando... </p> : null}
                    </div>
                </div>
            </div>

@@ -29,6 +29,66 @@
       "nombre": "Arenque Rojo",
       "precio": 741,
       "id": 6
+    },
+    {
+      "nombre": "Arenque",
+      "precio": 56,
+      "id": 7
+    },
+    {
+      "nombre": "Arenque",
+      "precio": 56,
+      "id": 8
+    },
+    {
+      "nombre": "Naruto",
+      "precio": 51,
+      "id": 9
+    },
+    {
+      "nombre": "Naruto",
+      "precio": 51,
+      "id": 10
+    },
+    {
+      "nombre": "Naruto",
+      "precio": 51,
+      "id": 11
+    },
+    {
+      "nombre": "Naruto",
+      "precio": 51,
+      "id": 12
+    },
+    {
+      "nombre": "Naruto",
+      "precio": 51,
+      "id": 13
+    },
+    {
+      "nombre": "Naruto",
+      "precio": 51,
+      "id": 14
+    },
+    {
+      "nombre": "Naruto",
+      "precio": 51,
+      "id": 15
+    },
+    {
+      "nombre": "Naruto",
+      "precio": 51,
+      "id": 16
+    },
+    {
+      "nombre": "Naruto",
+      "precio": 51,
+      "id": 17
+    },
+    {
+      "nombre": "Naruto",
+      "precio": 51,
+      "id": 18
     }
   ]
 }
