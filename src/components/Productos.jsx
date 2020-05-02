@@ -1,7 +1,16 @@
-import React,{Fragment} from 'react';
-
+import React,{Fragment, useEffect} from 'react';
+import {useSelector, useDispatch} from 'react-redux'
+import {obtenerProductos} from '../actions/productoActions';
 
 const Productos = () => {
+
+    const dispatch = useDispatch();
+    useEffect(() => {
+        //Consultar la API
+        const cargarProductos = () => dispatch(obtenerProductos());
+        cargarProductos();
+    }, []);
+
     return ( 
         <Fragment>
             <h2 className="text-center my-5">Lista de Productos</h2>
