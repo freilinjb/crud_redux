@@ -24,6 +24,13 @@ export default function(state = initialState, action) {
                 loading: false,//Cuando ya se confirmo que se guardo cambia el valor
                 productos: [...state.productos, action.payload]
             }
+
+        case AGRERGAR_PRODUCTO_ERROR:
+            return{
+                ...state,
+                loading: false,
+                error: action.payload
+            }
         default:
             return state;
     }
