@@ -20,7 +20,8 @@ export function crearNuevoProductoAction(producto) {
 }
 
 const agrergarProducto = () => ({
-    type: AGRERGAR_PRODUCTO
+    type: AGRERGAR_PRODUCTO,
+    payload: true
 });
 
 //Si el producto se guarba en la base de datos
@@ -31,5 +32,5 @@ const agregarProductoExito = producto => ({
 
 //Si hubo un error
 const agrergarProductoError = () => {
-    
+
 }

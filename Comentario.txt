@@ -9,3 +9,8 @@ json-server db.json ---port 4000
 
 types: solo describen lo que esta pasando en la aplicacion
 y usualmente se utiliza como en el action comop en el reducer
+
+payload: es lo que modifica el state
+dispatch: siempre es que manda a ejecutar las acciones y son funciones
+
+action.type: va rescribiendo la aplicacion

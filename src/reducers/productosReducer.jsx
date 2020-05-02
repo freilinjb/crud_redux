@@ -16,7 +16,7 @@ export default function(state = initialState, action) {
         case AGRERGAR_PRODUCTO:
             return{
                 ...state,
-                loading: true
+                loading: action.payload
             }
         case AGRERGAR_PRODUCTO_EXITO:
             return{
