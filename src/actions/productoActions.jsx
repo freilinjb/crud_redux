@@ -69,8 +69,11 @@ export function obtenerProductos() {
         dispatch(descargarProductos());
 
         try {
-            const respuesta = await clienteAxios.get('/productos');
-            dispatch(agrergarProductosExitosa(respuesta.data));
+            setTimeout( async() => {
+                const respuesta = await clienteAxios.get('/productos');
+                dispatch(agrergarProductosExitosa(respuesta.data));
+            },3000);
+            
             
         } catch (error) {
             dispatch(descargarProductosError())
