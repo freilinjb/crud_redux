@@ -9,12 +9,12 @@ import clienteAxios from '../config/axios';
 export function crearNuevoProductoAction(producto) {
     console.log(producto);
     
-    return (dispatch) => {
+    return async (dispatch) => {
         dispatch(agrergarProducto());
 
         try {
             //Insertar en la API
-            clienteAxios.post('/productos', producto);
+            await clienteAxios.post('/productos', producto);
 
             //Si todo sale bien, actualiza el state
             dispatch(agregarProductoExito(producto));

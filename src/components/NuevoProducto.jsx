@@ -2,7 +2,8 @@ import React,{useState} from 'react';
 import { useDispatch, useSelector} from 'react-redux';
 
 //useDiapatch: sirve para mandar a ejecutar las actiones que tengamos
-//useSelector: es una forma de acceder al state dentro del componente
+//useSelector: es una forma de acceder al state dentro del componente y se usa para leer lo que hay en el state
+
 
 //Actions de Redux
 import { crearNuevoProductoAction } from  '../actions/productoActions.jsx';
@@ -14,6 +15,12 @@ const NuevoProducto = () => {
 
     //Utilizar use dispatch y te crea una funcion
     const dispatch = useDispatch();
+
+    //acceder al state del store
+    const cargando = useSelector( state => state);
+
+    console.log(cargando);
+    
 
     //dispatch se utiliza para mandar a llamar las funciones que esten en el action
     //manda a llamar el action de productoAction
