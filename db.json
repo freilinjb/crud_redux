@@ -1,66 +1,6 @@
 {
   "productos": [
     {
-      "id": 1,
-      "nombre": "Jugo de Zanahoria",
-      "precio": "31111"
-    },
-    {
-      "id": 2,
-      "nombre": "Jugo de Naranja",
-      "precio": "1"
-    },
-    {
-      "nombre": "Jugo de Naranja",
-      "precio": "300",
-      "id": 3
-    },
-    {
-      "nombre": "Rib Eye 800g",
-      "precio": "200",
-      "id": 4
-    },
-    {
-      "nombre": "Jugo de Fresa",
-      "precio": "200",
-      "id": 5
-    },
-    {
-      "nombre": "Arenque Rojo",
-      "precio": 741,
-      "id": 6
-    },
-    {
-      "nombre": "Arenque",
-      "precio": 56,
-      "id": 7
-    },
-    {
-      "nombre": "Arenque",
-      "precio": 56,
-      "id": 8
-    },
-    {
-      "nombre": "Naruto",
-      "precio": 51,
-      "id": 9
-    },
-    {
-      "nombre": "Naruto",
-      "precio": 51,
-      "id": 10
-    },
-    {
-      "nombre": "Naruto",
-      "precio": 51,
-      "id": 11
-    },
-    {
-      "nombre": "Naruto",
-      "precio": 51,
-      "id": 12
-    },
-    {
       "nombre": "Naruto",
       "precio": 51,
       "id": 13
@@ -79,31 +19,6 @@
       "nombre": "Naruto",
       "precio": 51,
       "id": 16
-    },
-    {
-      "nombre": "Naruto",
-      "precio": 51,
-      "id": 18
-    },
-    {
-      "nombre": "Arenque",
-      "precio": 5454,
-      "id": 19
-    },
-    {
-      "nombre": "Arenque",
-      "precio": 5454,
-      "id": 20
-    },
-    {
-      "nombre": "Prueba",
-      "precio": 5,
-      "id": 21
-    },
-    {
-      "nombre": "Sopita Roja",
-      "precio": 789,
-      "id": 22
     }
   ]
 }
