@@ -15,12 +15,12 @@ const Productos = () => {
 
     //Obtener el state
     const productos = useSelector(state => state.productos.productos);
-    console.log(productos.productos);
+    const error = useSelector(state => state.productos.error);
 
     return ( 
         <Fragment>
             <h2 className="text-center my-5">Lista de Productos</h2>
-
+            { error ? <p className="font-weight-bold alert alert-danger text-center">Hubo un error</p> : null }
             <table className="table table-striped">
                 <thead className="bg-primary table-dark">
                     <tr>

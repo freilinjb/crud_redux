@@ -8,7 +8,7 @@ const Producto = ({producto}) => {
             <td>{nombre}</td>
             <td className="font-weight-bold">{precio}</td>
             <td className="acciones">
-                <Link to={`/productos/editar/${id}`} 
+                <Link to={`/producto/editar/${id}`} 
                     className="btn btn-primary mr-2">
                         Editar
                 </Link>
