@@ -73,7 +73,7 @@ export function obtenerProductos() {
             dispatch(agrergarProductosExitosa(respuesta.data));
             
         } catch (error) {
-            
+            dispatch(descargarProductosError())
         }
     }
 }
@@ -86,4 +86,9 @@ const descargarProductos = () =>({
 const agrergarProductosExitosa = productos => ({
     type: COMENZAR_DESCARGAR_EXITO,
     payload: productos
+});
+
+const descargarProductosError = () => ({
+    type: COMENZAR_DESCARGAR_ERROR,
+    payload: true
 });
