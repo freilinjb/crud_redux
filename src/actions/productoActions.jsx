@@ -76,7 +76,7 @@ export function obtenerProductos() {
             dispatch(agrergarProductosExitosa(respuesta.data));
             
         } catch (error) {
-            dispatch(descargarProductosError())
+            dispatch(descargarProductosError());
         }
     }
 }
@@ -106,7 +106,7 @@ export function borrarProductoAction(id) {
             dispatch(eliminarProductoExito());
 
         } catch (error) {
-            
+            dispatch(eliminarProductoError());
         }
         
     }
@@ -119,4 +119,9 @@ const obtenerProductoEliminar = id => ({
 
 const eliminarProductoExito=() => ({
     type: PRODUCTO_ELIMINADO_EXITO
+});
+
+const eliminarProductoError = () => ({
+    type: PRODUCTO_ELIMINADO_ERROR,
+    payload: true
 });

@@ -33,6 +33,7 @@ export default function(state = initialState, action) {
                 loading: false,//Cuando ya se confirmo que se guardo cambia el valor
                 productos: [...state.productos, action.payload]
             }
+        case PRODUCTO_ELIMINADO_ERROR:
         case COMENZAR_DESCARGAR_ERROR:
         case AGRERGAR_PRODUCTO_ERROR:
             return{
