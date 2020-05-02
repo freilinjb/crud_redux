@@ -17,7 +17,7 @@ const NuevoProducto = () => {
 
     //dispatch se utiliza para mandar a llamar las funciones que esten en el action
     //manda a llamar el action de productoAction
-    const agrergarProducto = () => dispatch(crearNuevoProductoAction());
+    const agrergarProducto = (producto) => dispatch(crearNuevoProductoAction(producto));
 
     //todo cuandl el suario haga submit
     const submitNuevoProducto =e=> {
@@ -31,7 +31,10 @@ const NuevoProducto = () => {
         //Si no hay errores
 
         //Enviar al action
-        agrergarProducto();
+        agrergarProducto({
+            nombre,
+            precio
+        });
 
     }
     return ( 
