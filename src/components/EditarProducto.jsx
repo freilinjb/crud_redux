@@ -19,8 +19,14 @@ const EditarProducto = () => {
         guardarProducto(productoEditar);
     },[]);
      
+    const onChangeFormulario =e=> {
+        guardarProducto({
+            ...producto,
+            [e.target.name] : e.target.value
+        });
+    }
 
-    const {nombre, precio, id} = productoEditar;
+    const {nombre, precio, id} = producto;
 
     const submiteditarProducto =e=> {
         e.preventDefault();
@@ -47,6 +53,7 @@ const EditarProducto = () => {
                                     placeholder="Nombre del Producto"
                                     name="nombre"
                                     value={nombre}
+                                    onChange={onChangeFormulario}
                                     />
                            </div>
                            <div className="form-group">
@@ -57,6 +64,7 @@ const EditarProducto = () => {
                                     placeholder="Precio del Producto"
                                     name="precio"
                                     value={Number(precio)}
+                                    onChange={onChangeFormulario}
                                     />
                            </div>
                            <button type="submit" 
