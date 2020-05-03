@@ -138,7 +138,7 @@ const eliminarProductoError = () => ({
 });
 
 //Colocar producto en edicion
-export function obtenerProductoEditar(producto) {
+export function obtenerProductoEditar(producto) {    
     return (dispatch) => {
         dispatch(obtenerProductoEditarAction(producto));
     }
