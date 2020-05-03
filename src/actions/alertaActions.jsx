@@ -15,3 +15,13 @@ const CrearAlerta =alerta=> ({
     payload: alerta
 });
 
+//TODO ocultar alerta
+export function ocultarAertaAction() {
+    return (dispatch) => {
+        dispatch(ocultarAlerta());
+    }
+}
+
+const ocultarAlerta =() => ({
+    type: OCULTAR_ALERTA
+});

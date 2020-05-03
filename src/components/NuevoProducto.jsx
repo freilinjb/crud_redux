@@ -7,7 +7,7 @@ import { useDispatch, useSelector} from 'react-redux';
 
 //Actions de Redux
 import { crearNuevoProductoAction } from  '../actions/productoActions.jsx';
-import { mostrarAlerta } from '../actions/alertaActions';
+import { mostrarAlerta, ocultarAertaAction } from '../actions/alertaActions';
 
 const NuevoProducto = ({history}) => {
 
@@ -45,6 +45,7 @@ const NuevoProducto = ({history}) => {
         }
 
         //Si no hay errores
+        dispatch(ocultarAertaAction());
 
         //Enviar al action
         agrergarProducto({

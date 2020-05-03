@@ -9,6 +9,11 @@
       "nombre": "Sopa Roja",
       "precio": "456",
       "id": 2
+    },
+    {
+      "nombre": "Sopa Roja",
+      "precio": 789,
+      "id": 3
     }
   ]
 }
