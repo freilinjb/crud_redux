@@ -1,13 +1,32 @@
-import React from 'react';
+import React,{ useState, useEffect} from 'react';
 import { useDispatch, useSelector} from 'react-redux';
+import {editarProductoAction} from '../actions/productoActions';
 
 const EditarProducto = () => {
 
+    //nuevo state de producto
+    const [producto, guardarProducto] = useState({
+        nombre: '',
+        precio: ''
+     })
+
     //Producto a editar
-    const producto = useSelector(state => state.productos.productoeditar);
-    const {nombre, precio, id} = producto;
-    console.log(producto);
-    
+    const productoEditar = useSelector(state => state.productos.productoeditar);
+
+    //llenar el state automaticamente
+    //no puede haber useEffect debajo de un return
+    useEffect(() => {
+        guardarProducto(productoEditar);
+    },[]);
+     
+
+    const {nombre, precio, id} = productoEditar;
+
+    const submiteditarProducto =e=> {
+        e.preventDefault();
+
+        editarProductoAction();
+    }
     
     return ( 
         <div className="row justify-content-center">
@@ -17,7 +36,9 @@ const EditarProducto = () => {
                        <h2 className="text-center md-4 font-weight-bold">
                            Editar Producto
                        </h2>
-                       <form>
+                       <form 
+                            onSubmit={submiteditarProducto}
+                       >
                            <div className="form-group">
                                 <label htmlFor="producto">Nombre del Producto</label>
                                 <input 
