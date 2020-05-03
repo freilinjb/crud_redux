@@ -21,6 +21,7 @@ const NuevoProducto = ({history}) => {
     //acceder al state del store
     const cargando = useSelector( state => state.productos.loading);
     const error = useSelector(state => state.productos.error);
+    const alerta = useSelector(state => state.alerta.alerta);
 
     //dispatch se utiliza para mandar a llamar las funciones que esten en el action
     //manda a llamar el action de productoAction
@@ -62,6 +63,9 @@ const NuevoProducto = ({history}) => {
                        <h2 className="text-center md-4 font-weight-bold">
                            Agregar Nuevo Producto
                        </h2>
+
+                        { alerta ? <p className={alerta.classes}> {alerta.msg} </p> : null }
+
                        <form
                         onSubmit={submitNuevoProducto}
                        >
