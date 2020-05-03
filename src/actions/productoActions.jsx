@@ -156,7 +156,7 @@ export function editarProductoAction (producto) {
         dispatch(editarProducto());
         
         try {
-            await clienteAxios.put(`/productsdfos/${producto.id}`, producto);            
+            await clienteAxios.put(`/productos/${producto.id}`, producto);            
             dispatch(editarProductoExito(producto));
         } catch (error) {
             dispatch(editarProductoError());

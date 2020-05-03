@@ -66,8 +66,10 @@ const NuevoProducto = ({history}) => {
 
                         { alerta ? <p className={alerta.classes}> {alerta.msg} </p> : null }
 
-                       <form
-                        onSubmit={submitNuevoProducto}
+                       <form 
+                            className="needs-validation"
+                            noValidate
+                            onSubmit={submitNuevoProducto}
                        >
                            <div className="form-group">
                                 <label htmlFor="producto">Nombre del Producto</label>
@@ -76,20 +78,28 @@ const NuevoProducto = ({history}) => {
                                     className="form-control" 
                                     placeholder="Nombre del Producto"
                                     name="nombre"
+                                    id="nombre"
                                     valu={nombre}
                                     onChange={e=>guardarNombre(e.target.value)}
+                                    required
                                     />
+                                <div className="valid-feedback">Looks good!</div>
+
                            </div>
                            <div className="form-group">
-                                <label htmlFor="producto">Precio del Prod ucto</label>
+                                <label htmlFor="precio">Precio del Producto</label>
                                 <input 
                                     type="number" 
                                     className="form-control" 
                                     placeholder="Precio del Producto"
                                     name="precio"
+                                    id="precio"
                                     value={precio}
                                     onChange={e=>guardarPrecio(Number(e.target.value))}
+                                    required
                                     />
+                                <div className="valid-feedback">Looks good!</div>
+                                
                            </div>
                            <button type="submit" className="btn btn-primary btn-block font-weight w-100">AGREGAR</button>
                        </form>
