@@ -74,9 +74,10 @@ export function obtenerProductos() {
         try {
             const respuesta = await clienteAxios.get('/productos');
             dispatch(agrergarProductosExitosa(respuesta.data));
-            
+
         } catch (error) {
             dispatch(descargarProductosError());
+            console.log(error);
         }
     }
 }
@@ -105,10 +106,17 @@ export function borrarProductoAction(id) {
             await clienteAxios.delete(`/productos/${id}`);
             dispatch(eliminarProductoExito());
 
+            //Si se elimina, mostrar alerta
+            Swal.fire(
+                'Eliminado!',
+                'EL PRODUCTO se ha eliminado correctamente.',
+                'success'
+              );
+
         } catch (error) {
             dispatch(eliminarProductoError());
+            console.log(error);
         }
-        
     }
 }
 
