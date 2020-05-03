@@ -2,6 +2,7 @@ import {
     MOSTRAR_ALERTA,
     OCULTAR_ALERTA
 } from '../types';
+import { mostrarAlerta } from '../actions/alertaActions';
 
 const initialState = {
     alerta: null
@@ -9,6 +10,11 @@ const initialState = {
 
 export default function(state = initialState, action) {
     switch(action.type) {
+        case MOSTRAR_ALERTA:
+            return {
+                ...state,
+                alerta: action.payload
+            }
         default: 
             return state;
     }
