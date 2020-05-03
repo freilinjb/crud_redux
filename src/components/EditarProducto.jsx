@@ -1,8 +1,12 @@
 import React,{ useState, useEffect} from 'react';
 import { useDispatch, useSelector} from 'react-redux';
 import {editarProductoAction} from '../actions/productoActions';
+import { useHistory } from 'react-router-dom';
 
 const EditarProducto = () => {
+    
+    const history = useHistory();
+    const dispatch = useDispatch();  
 
     //nuevo state de producto
     const [producto, guardarProducto] = useState({
@@ -16,22 +20,24 @@ const EditarProducto = () => {
     //llenar el state automaticamente
     //no puede haber useEffect debajo de un return
     useEffect(() => {
-        guardarProducto(productoEditar);
-    },[]);
+        guardarProducto(productoEditar); 
+    },[productoEditar]);
      
     const onChangeFormulario =e=> {
         guardarProducto({
             ...producto,
             [e.target.name] : e.target.value
         });
+        
     }
 
-    const {nombre, precio, id} = producto;
+    const {nombre, precio} = producto;
 
     const submiteditarProducto =e=> {
         e.preventDefault();
+        dispatch(editarProductoAction(producto));
 
-        editarProductoAction();
+        history.push('/');
     }
     
     return ( 
@@ -63,7 +69,7 @@ const EditarProducto = () => {
                                     className="form-control" 
                                     placeholder="Precio del Producto"
                                     name="precio"
-                                    value={Number(precio)}
+                                    value={precio}
                                     onChange={onChangeFormulario}
                                     />
                            </div>
